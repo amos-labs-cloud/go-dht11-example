@@ -1,4 +1,4 @@
-package go_dht11_example
+package main
 
 import (
 	"fmt"
