@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/d2r2/go-dht"
+	"github.com/d2r2/go-logger"
 	"github.com/stianeikeland/go-rpio/v4"
 	"log"
 )
@@ -15,10 +16,10 @@ func main() {
 	}
 	defer rpio.Close()
 
-	//err := logger.ChangePackageLogLevel("dht", logger.FatalLevel)
-	//if err != nil {
-	//	log.Panic().Msgf("could not turn off dht logger: %w", err)
-	//}
+	err = logger.ChangePackageLogLevel("dht", logger.FatalLevel)
+	if err != nil {
+		log.Fatalf("could not turn off dht logger: %s", err)
+	}
 
 	pinNumber := 18
 	tries := 10
