@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-
 	log.Println("Opening rpio")
 	err := rpio.Open()
 	if err != nil {
@@ -30,5 +29,4 @@ func main() {
 	}
 
 	fmt.Printf("temperature: %0.2f°C humidity: %0.2f%%\n", temperature, humidity)
-
 }
