@@ -21,3 +21,4 @@
 go.work
 go-dht11-example
 vendor
+.idea
